@@ -64,5 +64,22 @@
     })
 
   
+    
+})();
 
-})(); 
+
+
+function toggleNav() {
+  let navMobile = document.querySelector(".navigation-content");
+  if (navMobile.style.display === "block") {
+   navMobile.style.display = "none";
+  } else {
+    navMobile.style.display = "block";
+ }
+    
+}
+
+const hamburger = () => {
+    document.querySelector(".fa-bars").addEventListener("click", toggleNav)
+}
+hamburger();
