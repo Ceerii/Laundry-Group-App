@@ -15,7 +15,6 @@
 body {
    font-family: 'Product Sans Regular';
 }
-<<<<<<< HEAD
 container {
     width: 200px;
     height: 100%;
@@ -66,9 +65,6 @@ container {
       box-shadow: 0 0 0 0 rgba(#5a99d4, 0);
     }
   }
-=======
-a{text-decoration:none}
->>>>>>> 91642014f16ed418f02537cb83c2a28bd9f0fcfc
 .status{
     display:none;
 }
@@ -118,9 +114,6 @@ a{text-decoration:none}
     width: 100%;
     position: fixed;
     top: 0;
-}
-.fa-bars{
-display:block;
 }
 .navigation-title {
     color: #5170FD;
@@ -307,24 +300,14 @@ margin-left: 10px;
     padding: 95px 1.5rem 0;
 }
 
-.search-results-container>p{
-    position:fixed;
-    
-}
 
 .cards {
     display: flex;
     flex-wrap: wrap;
-<<<<<<< HEAD
     justify-content: flex-start;
     margin: 3rem 0 0 ;
-=======
-    justify-content: space-around;
-    top:5rem;
->>>>>>> 91642014f16ed418f02537cb83c2a28bd9f0fcfc
     position: relative;
-    z-index:2;
-
+    z-index: 3;
 }
 
 .resultCards {
@@ -853,70 +836,3 @@ margin-left: 10px;
     }
 
 
-
-@media all and (min-width: 800px) {
-     .fa-bars{
-    display:none;
-    }
-
-}
-
-@media all and (max-width: 800px) {
-    .navigation-content{
-        flex-direction:column;
-        position:absolute;
-        background:white;
-        justify-content:center;
-        padding:0 1rem;
-        right:0.5rem;
-        top:1.5rem;
-        z-index:10;
-        display:none;
-        transition: left 0.5s ease;
-    }
-    .fa-bars{
-    display:block;
-        position:relative;
-        left:1rem;
-    }
-    .navigation-content button{
-    margin-left:0 !important;
-        z-index:3;
-         transition: left 0.5s ease;
-
-    }
-  .search-container-text{
-    font-size:1.5rem !important;
-     margin-top:-6rem;
-    
-    }
-    .filter-search{
-    width:60%;
-    }
-    .search-input{
-        z-index:1;
-        margin-top:2rem !important;
-      
-  }
-    .search-container-button{
-        margin-top:1rem !important;
-        z-index:2;
-    }
-    .pic{
-        position:relative;
-    bottom:1rem;
-    }
-    .cards{
-        display:grid;
-        margin-top:6rem;
-        grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
-        grid-gap:20px;
-
-    }
-   .resultCards{
-       width:100%;
-}
-    .picture1, .picture2{
-    visibility:hidden;
-    }
-}

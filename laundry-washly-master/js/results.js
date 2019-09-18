@@ -164,11 +164,6 @@
             }
         });
     }
-<<<<<<< HEAD
-
-   
-})();
-=======
 })();
 
 
@@ -186,4 +181,3 @@ const hamburger = () => {
     document.querySelector(".fa-bars").addEventListener("click", toggleNav)
 }
 hamburger();
->>>>>>> 91642014f16ed418f02537cb83c2a28bd9f0fcfc
