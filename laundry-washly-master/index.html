@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
     <script src="https://kit.fontawesome.com/c51f600abd.js"></script>
     <link href="css/sign-in.css" rel="stylesheet">
     <link href="css/register.css" rel="stylesheet">
@@ -21,7 +22,7 @@
             <div class="navigation-content">
                 <a href="#">About</a>
                 <a href="#">FAQ</a>
-                <a>Profile</a>
+                <!-- <a class="displayProfile">Profile</a> -->
                 <a href="#" id="loginBtn" class="loginBtn status">Login</a>
                 <button id="registerBtn">Sign Up</button>
             </div>
@@ -29,10 +30,11 @@
                 
                 
         <div class="search-container"> 
-            <h2 class="search-container-text">Find the Closest <span class="blue-text">Laundry Service</span> Around You</h2>
+            <h2 class="search-container-text">Find the <span class="blue-text"> Closest Laundry Service</span> Around You</h2>
             <div class="search-input">
                 <input id="location" class="input-text" type="text" placeholder="Enter your location to see laundry outlets close to you"></input>
-                <i class="fas fa-map-marker-alt" id="searchIcon"></i>
+            
+                    <i class="fas fa-map-marker-alt" id="searchIcon"></i>
             </div>
             <button id="search-container-button" class="search-container-button" >Search</button>
         </div>
@@ -107,6 +109,8 @@
             
 
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5Xh2zPVQMGJZM5o82au4yP5Qk0kA8nSA&libraries=places"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
     <script src="./js/autocomplete.js"></script>
     <script src="./js/authentication.js"></script>
     <script src="./js/index.js"></script>

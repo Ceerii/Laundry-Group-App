@@ -1,4 +1,19 @@
 (function() {
+    // const displayProf = document.getElementsByClassName("displayProfile");
+    
+  
+    
+//        function removeEle(){
+//         if(localStorage.getItem("status") === true){
+//             displayProf.style.display="block";
+//             loginBtn.style.display ="none";
+//             registerBtn.style.display ="none";
+//       }else{
+//     displayProf.style.display="none";
+//     loginBtn.style.display ="block";
+//     registerBtn.style.display ="block";
+//   }
+//        }    
     // let textAddress= document.getElementById("location").value;
     const getAddress = document.getElementById("searchIcon");
     const searchBtn = document.getElementById("search-container-button");
@@ -10,7 +25,6 @@
         localStorage.setItem('latlng', JSON.stringify(latlng));
         localStorage.setItem('currentAddress', currentAddress);
         window.location.assign('./result-page.html');
-        removeEle();
         }
     })
 

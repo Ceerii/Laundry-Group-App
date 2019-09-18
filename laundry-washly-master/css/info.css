@@ -4,8 +4,8 @@
   .addreview{
     background:white;
     color:#5170FD;
-    width:200px;
-    height:40px;
+    min-width:200px;
+    min-height:40px;
     border:1px solid #5170FD;
     border-radius: 4px;
   }

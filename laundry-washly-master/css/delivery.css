@@ -34,7 +34,7 @@
      height:40px;
      margin-left: -110px;
   }
-  .delivery-button-right{
+  /* .delivery-button-right{
     background:#5170FD;
     color:white;
     width:170px;
@@ -43,7 +43,7 @@
     top:74% !important;
     left:90% !important;
   
-  }
+  } */
   .delivery-button-right:hover{
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1), 0 3px 12px 0 rgba(0, 0, 0, 0.1);
   }

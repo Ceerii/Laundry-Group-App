@@ -1,12 +1,16 @@
-(function() {
-   if(localStorage.getItem("status")){
-    removeEle();
-   }
+// $('.ui')
+//   .rating('disable')
+// ;
 
-   function removeEle(){
-    loginBtn.style.display ="none"
-    registerBtn.style.display ="none"
-   }    
+(function() {
+//    if(localStorage.getItem("status")){
+//     removeEle();
+//    }
+
+//    function removeEle(){
+//     loginBtn.style.display ="none"
+//     registerBtn.style.display ="none"
+//    }    
 
     find(JSON.parse(localStorage.getItem('latlng')));
     // resultsFromQuery(localStorage.getItem('response'));
@@ -75,22 +79,27 @@
 
     // Html Cards template display
     function showResults(results) {
+        console.log(results);
         resultLength.innerHTML = `There are ${results.length} results based on your search`;
         const cardTemplate = results.map(function(result) {
             return (
+               
                 `<div class="resultCards">
                     <div class="resultCards-image">
                         <img src="${result.photos ? result.photos[0].getUrl() : './img/L1.png'}" alt="">
                     </div>
                     <div class="resultCards-content">
                         <p>${result.name}</p>
-                        <p>${result.rating ? result.rating : 0}</p>
-                        <button href="#" class="trigger">View</button>
+                        <div class="ui rating" data-rating="${result.rating ? result.rating : 0 } "> 
+                      </div>
+                        <button href="#" class="">View</button>
                     </div>
                 </div>`
+                
             )
+           
         })
-    
+        
         resultCards.innerHTML = cardTemplate.join('');
 
         // Add event listeners on all card buttons to trigger modal 
@@ -101,6 +110,7 @@
             });
         }
     }
+    
 
     // HTML Modal Display for each card
     function displayPlaceDetails(id) {
@@ -112,13 +122,8 @@
                     return (
                         `<div class="reviewName">
                             <div class="reviewPerson">${review.author_name}</div>
-                            <div class="reviewDate">05/Jul/2019</div>
                         </div>
                         <div>
-                            <div class="reviewStars">
-                                <div class='stars'>yeah</div>
-                                <div class="excellent">Excellent Packaging</div>
-                            </div>
                             <div class="reviewInfo">
                                 <div>${review.text}</div>
                             </div>
@@ -138,7 +143,7 @@
                         </div>
 
                         <div class="bottom-container">
-                            ${reviews}
+                            ${reviews[0]}
                         </div>
                         
                         
@@ -150,7 +155,7 @@
                         </div>
                     </div>`
                 );
-
+                console.log(reviews);
                 firstSwiperSlide.innerHTML = modalInfoTemplate;
                 resultModal.classList.toggle('show-modal');
                 
@@ -159,4 +164,6 @@
             }
         });
     }
+
+   
 })();

@@ -15,6 +15,56 @@
 body {
    font-family: 'Product Sans Regular';
 }
+container {
+    width: 200px;
+    height: 100%;
+    margin: 0 auto 0;
+    perspective: 1000;
+    backface-visibility: hidden;
+    background: #fff;
+  }
+  /* pulsing */
+  .pulse-button {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    font-size: 1.3em;
+    font-weight: light;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 100px;
+    letter-spacing: -1px;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    background: #5a99d4;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 rgba(#5a99d4, .5);
+    -webkit-animation: pulse 1.5s infinite;
+  }
+  .pulse-button  :hover {
+    -webkit-animation: none;
+  }
+  
+  @-webkit-keyframes pulse {
+    0% {
+      @include transform(scale(.9));
+    }
+    70% {
+      @include transform(scale(1));
+      box-shadow: 0 0 0 50px rgba(#5a99d4, 0);
+    }
+      100% {
+      @include transform(scale(.9));
+      box-shadow: 0 0 0 0 rgba(#5a99d4, 0);
+    }
+  }
 .status{
     display:none;
 }
@@ -24,7 +74,7 @@ body {
 
 .container {
   background:#fdfeff;
-  background-image: url("/washly-new-app-master/img/Groups.png");
+  background-image: url("/laundry-washly-master/img/Groups.png");
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: 60%;
@@ -141,6 +191,7 @@ body {
 .search-input i {
     position: absolute;
     right: 1rem;
+    color:#5170FD;
 }
 .blue-text {
     letter-spacing: 100;
@@ -248,16 +299,13 @@ margin-left: 10px;
     margin: 0 auto;
     padding: 95px 1.5rem 0;
 }
-.search-results-container>p{
-    z-index:5;
-    position:fixed;
-}
+
 
 .cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 3rem 0 0;
+    justify-content: flex-start;
+    margin: 3rem 0 0 ;
     position: relative;
     z-index: 3;
 }
@@ -267,6 +315,7 @@ margin-left: 10px;
     width: calc(25% - 25px);
     min-height: 250px;
     margin-bottom: 2rem;
+    margin-left:1rem;
     border-radius: 8px;
     position: relative;
     background-color: white;
@@ -315,16 +364,7 @@ margin-left: 10px;
     /* transform: scale(1.1);
     transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s; */
 }
-.modal-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 1rem 1.5rem;
-    width: 24rem;
-    border-radius: 0.5rem;
-}
+
 .close-button {
     float: right;
     width: 1.5rem;
@@ -362,11 +402,11 @@ margin-left: 10px;
 
 .slide-content.Infocontainer {
     background-position: bottom;
-    background-image:url('/washly-new-app-master/img/Info.png');
+    background-image:url('/laundry-washly-master/img/Info.png');
     font-size:14px;
 }
 .container-image{
-    background-image:url('/washly-new-app-master/img/L1.png');
+    background-image:url('/laundry-washly-master/img/L1.png');
     background-repeat: no-repeat;
     width:100%;
     max-width:600px;
@@ -382,8 +422,8 @@ margin-left: 10px;
     justify-content: space-between;
     position: relative;
     height:100%;
-    max-height:150px;
-    margin: 2rem 2rem;
+    max-height:90px;
+    margin: 0rem 2rem;
     padding: 0 2rem;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 5px 0 rgba(0, 0, 0, 0.1);
     z-index:100;
@@ -434,17 +474,17 @@ margin-left: 10px;
   }
   
 .slide-content.bookingContainer {
-    background-image: url("/washly-new-app-master/img/grouped.png");
+    background-image: url("/laundry-washly-master/img/grouped.png");
     background-position: bottom;
 }
 
 .slide-content.delivery-container {
     background-position: bottom;
-    background-image: url("/washly-new-app-master/img/delivery.png");
+    background-image: url("/laundry-washly-master/img/delivery.png");
 }
 
 .slide-content.summaryContainer{
-    background-image:url("/washly-new-app-master/img/summary.png");
+    background-image:url("/laundry-washly-master/img/summary.png");
     background-size: cover;
 }
 
